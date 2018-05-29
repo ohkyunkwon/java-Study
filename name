@@ -1,4 +1,4 @@
-public class rental {
+public class Rental {
 	//필드
 	private String name; //이름
 	
