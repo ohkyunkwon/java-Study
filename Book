@@ -1,13 +1,21 @@
-public class Book extends Product{
-	private int ISBN;
+
+public class BookInfromation extends Book{
 	private int productID;
+	private String kinds;
 	private String title;
 	private String author;
-	public Book(int productID, String description, String maker, int price, int ISBN, String title, String author) {
+	private String publisher;
+	public BookInfromation(int productID, String description, String maker, int price, String kinds, String title, String author, String publisher) {
 		super(productID, description, maker, price);
-		this.ISBN = ISBN;
 		this.title = title;
 		this.author = author;
+		this.publisher = publisher;
+	}
+	public void setkinds(String kinds){
+		this.kinds = kinds;
+	}
+	public String getkinds(){
+		return kinds;
 	}
 	public void setTitle(String title){
 		this.title = title;
@@ -21,17 +29,18 @@ public class Book extends Product{
 	public String getAuthor(){
 		return author;
 	}
-	public void setISBN(int iSBN){
-		ISBN = iSBN;
+	public void setpublisher(String publisher){
+		this.publisher = publisher;
 	}
-	public int getISNN(){
-		return ISBN;
+	public String getpublisher(){
+		return publisher;
 	}
 	public void showInfo(){
 		super.showInfo();
-		System.out.println("ISBN>>"+ISBN);
+		System.out.println("책 종류>>"+kinds);
 		System.out.println("책 제목>>"+title);
 		System.out.println("저자>>"+author);
+		System.out.println("출판사>>"+publisher);
 	}
 
 }
